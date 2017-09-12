@@ -1,0 +1,85 @@
+div:hover{
+	background-color: yellow;
+	color: goldenrod;
+	cursor: pointer;
+}
+
+.Box1{
+	font-family: tahoma;
+	font-size: 40px;
+	background-color: #eeeff2;
+	width: 100px;
+	height: 150px;
+    border-left: 10px dashed #687291;
+    margin-top: 10px;
+}
+
+.Box2{
+	font-family: tahoma;
+	font-size: 40px;
+	background-color: #eeeff2;
+	width: 100px;
+	height: 150px;
+    border-left: 10px dashed #687291;
+    margin-top:10px;
+    margin-left: 10px;
+    position: absolute;
+    left: 120px;
+    top : 0px;
+}
+
+.Box3{
+	font-family: tahoma;
+	font-size: 40px;
+	background-color: #eeeff2;
+	width: 100px;
+	height: 150px;
+    border-left: 10px dashed #687291;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+    left: 240px;
+    top : 0px; 
+}
+
+.Box4{
+	font-family: tahoma;
+	font-size: 40px;
+	background-color: #eeeff2;
+	width: 100px;
+	height: 150px;
+    border-left: 10px dashed #687291;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+    left: 360px;
+    top : 0px; 
+}
+
+.Box5{
+	font-family: tahoma;
+	font-size: 40px;
+	background-color: #eeeff2;
+	width: 100px;
+	height: 150px;
+    border-left: 10px dashed #687291;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+    left: 480px;
+    top : 0px; 
+}
+
+.Box6{
+	font-family: tahoma;
+	font-size: 40px;
+	background-color: #eeeff2;
+	width: 100px;
+	height: 150px;
+    border-left: 10px dashed #687291;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px; 
+}
