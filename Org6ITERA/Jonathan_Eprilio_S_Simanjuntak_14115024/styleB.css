@@ -1,0 +1,55 @@
+﻿.small{
+	width: 10px;
+	height: 10px;
+	background-color: #D0D0FF;
+	margin-right: auto; 
+	margin-bottom: 10px;
+}
+
+.boxA:hover {
+	background: yellow;
+	color : goldenrod;
+	cursor: pointer;
+}
+
+.boxB:hover {
+	background: yellow;
+	color : goldenrod;
+	cursor: pointer;
+}
+
+p {
+	position: relative;
+	top:10px;
+	margin-top: 0px;
+	margin-left: 20px;
+	font-family: Tahoma;
+	font-size: 40px;
+}
+
+.boxA{
+	width: 100px;
+	height: 150px;
+	margin-right: auto;
+	background-color: #eeeff2;
+	float: left;
+	margin-left: 10px;
+}
+
+.boxB{
+	background-color: #eeeff2;
+	width: 100px;
+	height: 150px;
+	border: 4px black;
+	margin-left: auto;
+	margin-top : 20px;
+	position: fixed;
+	bottom: 10px;
+	right:10px;
+
+}
+
+body{
+	text-align: center;
+
+}
