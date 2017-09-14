@@ -1,0 +1,106 @@
+#A{
+	width: 100px;
+	height: 150px;
+	margin-right: auto;
+	margin-left: auto;
+	margin:10px;
+	border-left-style: dashed;
+	border-width: 10px;
+	border-color: #D0D0FF;
+	padding: 10px;
+	font-size: 40px;
+	font-family: Tahoma;
+	float: left;
+	background-color: #eeeff2;
+
+}
+#B{
+	width: 100px;
+	height: 150px;
+	margin-right: auto;
+	margin-left: auto;
+	margin:10px;
+	border-left-style: dashed;
+	border-width: 10px;
+	border-color: #D0D0FF;
+	padding: 10px;
+	font-size: 40px;
+	font-family: Tahoma;
+	float: left;
+	background-color: #eeeff2;
+}
+#C{
+	width: 100px;
+	height: 150px;
+	margin-right: auto;
+	margin-left: auto;
+	margin:10px;
+	border-left-style: dashed;
+	border-width: 10px;
+	border-color: #D0D0FF;
+	padding: 10px;
+	font-size: 40px;
+	font-family: Tahoma;
+	float: left;
+	background-color: #eeeff2;
+}
+#D{
+	width: 100px;
+	height: 150px;
+	margin-right: auto;
+	margin-left: auto;
+	margin:10px;
+	border-left-style: dashed;
+	border-width: 10px;
+	border-color: #D0D0FF;
+	padding: 10px;
+	font-size: 40px;
+	font-family: Tahoma;
+	float: left;
+	background-color: #eeeff2;
+}
+#E{
+	width: 100px;
+	height: 150px;
+	margin-right: auto;
+	margin-left: auto;
+	margin:10px;
+	border-left-style: dashed;
+	border-width: 10px;
+	border-color: #D0D0FF;
+	padding: 10px;
+	font-size: 40px;
+	font-family: Tahoma;
+	float: left;
+	background-color: #eeeff2;
+}
+#F{
+	width: 100px;
+	height: 150px;
+	margin-right: auto;
+	margin-left: auto;
+	margin:10px;
+	border-left-style: dashed;
+	border-width: 10px;
+	border-color: #D0D0FF;
+	padding: 10px;
+	font-size: 40px;
+	font-family: Tahoma;
+	float: left;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	background-color: #eeeff2;
+}
+
+
+body{
+	font-family: Tahoma;
+	margin:10px;
+}
+#A:hover{
+	cursor: pointer;
+	background-color: yellow;
+	color: goldenrod;
+	
+}

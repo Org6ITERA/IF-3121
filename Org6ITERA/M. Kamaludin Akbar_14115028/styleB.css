@@ -1,0 +1,26 @@
+.box{
+	width: 100px;
+	height: 150px;
+	font-size: 40px;
+	font-family:Tahoma;
+	margin-right: 10px;
+	border-left: 10px dashed #D0D0FF;
+	float: left;
+	background-color: #eeeff2;
+	padding-left: 10px;
+	cursor: pointer;
+	
+
+}
+
+div:hover{
+	background-color: yellow;
+	color: goldenrod;
+}
+
+#boxF{
+	position: absolute;
+    bottom: 0;
+    right: 0;
+	
+}
