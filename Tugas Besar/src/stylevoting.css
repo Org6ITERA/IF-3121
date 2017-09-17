@@ -1,0 +1,52 @@
+.box {
+	max-width: 978px;
+	margin:0 auto;
+}
+
+.head {
+	background-color:#dfe1e7;
+	height: 200px;
+	border: 2px solid;
+	line-height: 45px;
+}
+
+.menu {
+	background-color:#dfe1e7;
+	height: 50px;
+	border: 2px solid;
+}
+
+
+.Body{
+ 	background:white;
+  	width:638px;
+ 	height:496px;
+  	float:left;
+ 	display:inline;
+ 	border:2px solid;
+}
+
+.sidebar{
+ 	background: green;
+  	width:332px;
+ 	height:496px;
+  	display:inline;
+ 	float:left;
+  	border:2px solid;
+
+}
+
+.footer{
+ 	background:#687291;
+ 	height:200px;
+  	border:2px solid;
+}
+
+.judul{
+ 	font-size:40px;
+ 	font-weight:bold;
+}
+
+.isi{
+	 overflow:hidden
+}
