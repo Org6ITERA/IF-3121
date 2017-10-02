@@ -1,0 +1,27 @@
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Data Kanidat</a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse in">
+            <div class="panel-body">
+            <script src="./js/addInput.js" language="Javascript" type="text/javascript"></script>
+            <form method="POST">
+              <div id="dynamicInput">
+              <div id="pickme0">
+                <b>Nama</b><br><input type="text" class="form-control" name="myInputs[]">
+                <label class="custom-file"><br>
+                    <input type="file" id="file" class="custom-file-input" required>
+                    <span class="custom-file-control"></span>
+                </label><br><br>
+                <input type="button" value="delete" onClick="removeDiv('pickme0');">
+              </div>
+              </div>
+              <br><br>
+              <input type="button" value="Add another Kanidat" onClick="addInput('dynamicInput');">
+           </form>
+            </div>   
+          </div>
+      </div>

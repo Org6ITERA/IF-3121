@@ -1,0 +1,2 @@
+1.menmbah kanidat(termasuk mendapatkan data di php)
+http://www.randomsnippets.com/2008/02/21/how-to-dynamically-add-form-elements-via-javascript/

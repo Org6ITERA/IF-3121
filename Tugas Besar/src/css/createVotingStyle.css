@@ -1,0 +1,24 @@
+body{
+	text-align: center;
+}
+
+#judul{
+	margin-bottom: 40px;
+}
+.panel-body{
+	margin-left: 20px;
+}
+
+.form_container{
+	width: 100%;
+	margin-left: 20px;
+}
+#waktuMulai{
+	margin-left: 13px;
+}
+
+.container h3{
+	margin-top: 100px;
+}
+
+

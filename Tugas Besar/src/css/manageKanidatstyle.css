@@ -1,0 +1,12 @@
+body{
+	text-align: center;
+}
+
+form #dynamicInput div{
+	
+	margin-top: 50px;
+}
+
+.panel-body{
+	margin-left: 20px;
+}
