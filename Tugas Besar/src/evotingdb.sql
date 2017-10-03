@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `kandidat` (
   `id_kandidat` int(3) NOT NULL AUTO_INCREMENT,
-  `jabatan` varchar(50) NOT NULL,
+  `nama_kandidat` varchar(50) NOT NULL,
   `visi` text NOT NULL,
   `misi` text NOT NULL,
   `foto` varchar(200) NOT NULL,
@@ -39,8 +39,8 @@ CREATE TABLE IF NOT EXISTS `kandidat` (
 -- Dumping data for table `kandidat`
 --
 
-INSERT INTO `kandidat` (`id_kandidat`, `jabatan`, `visi`, `misi`, `foto`) VALUES
-(1, 'Jonathan Eprilio S. Simanjuntak', 'Calon Ketua KM-ITERA', 'Visi menjadikan Mahasiswa Institut Teknologi Sumatera Berpotensi', 'Misi Memberlakukan Program kreativitas pada setiap himpunan intera kampus ...', 'Kandidat-Joe.jpg');
+INSERT INTO `kandidat` (`id_kandidat`, `nama_kandidat`, `visi`, `misi`, `foto`) VALUES
+(1, 'Jonathan Eprilio S. Simanjuntak', 'Visi menjadikan Mahasiswa Institut Teknologi Sumatera Berpotensi', 'Misi Memberlakukan Program kreativitas pada setiap himpunan intera kampus ...', 'Kandidat-Joe.jpg');
 
 -- --------------------------------------------------------
 
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `login` (
 
 INSERT INTO `login` (`id_login`, `username`, `nama`, `password`, `nim`, `prodi`, `level`) VALUES
 (1, 'admin', 'Administrator', '2a24588d01f86c4822d68b5c383cb141', '', '', 1),
-(2, 'User', 'User', '23e590a651f35d7ec249f4c44db89645', '14115024', 'Teknik Informatika', 2),
+(2, 'User', 'User', '23e590a651f35d7ec249f4c44db89645', '14115024', 'Teknik Informatika', 2);
 
 -- --------------------------------------------------------
 
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `voting` (
 --
 
 INSERT INTO `voting` (`id_voting`, `id_kandidat`, `id_login`, `waktu`, `poin`) VALUES
-(1, 1, 2, '2017-09-25 18:37:23', 1),
+(1, 1, 2, '2017-09-25 18:37:23', 1);
 --
 -- Constraints for dumped tables
 --
