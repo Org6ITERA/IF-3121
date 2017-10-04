@@ -2,8 +2,8 @@
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Sep 24, 2017 at 05:46 PM
+-- Host: 127.0.0.1
+-- Generation Time: Oct 04, 2017 at 08:10 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -33,14 +33,15 @@ CREATE TABLE IF NOT EXISTS `kandidat` (
   `misi` text NOT NULL,
   `foto` varchar(200) NOT NULL,
   PRIMARY KEY (`id_kandidat`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `kandidat`
 --
 
 INSERT INTO `kandidat` (`id_kandidat`, `nama_kandidat`, `visi`, `misi`, `foto`) VALUES
-(1, 'Jonathan Eprilio S. Simanjuntak', 'Visi menjadikan Mahasiswa Institut Teknologi Sumatera Berpotensi', 'Misi Memberlakukan Program kreativitas pada setiap himpunan intera kampus ...', 'Kandidat-Joe.jpg');
+(1, 'Jonathan Eprilio S. Simanjuntak', 'Visi menjadikan Mahasiswa Institut Teknologi Sumatera Berpotensi', 'Misi Memberlakukan Program kreativitas pada setiap himpunan intera kampus ...', 'Kandidat-Joe.jpg'),
+(13, 'ben', 'a', 'a', 'calon-9335-ben.jpg');
 
 -- --------------------------------------------------------
 
@@ -56,16 +57,18 @@ CREATE TABLE IF NOT EXISTS `login` (
   `nim` varchar(255) NOT NULL,
   `prodi` varchar(255) NOT NULL,
   `level` int(11) NOT NULL,
+  `email` varchar(30) NOT NULL,
   PRIMARY KEY (`id_login`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
 
 --
 -- Dumping data for table `login`
 --
 
-INSERT INTO `login` (`id_login`, `username`, `nama`, `password`, `nim`, `prodi`, `level`) VALUES
-(1, 'admin', 'Administrator', '2a24588d01f86c4822d68b5c383cb141', '', '', 1),
-(2, 'User', 'User', '23e590a651f35d7ec249f4c44db89645', '14115024', 'Teknik Informatika', 2);
+INSERT INTO `login` (`id_login`, `username`, `nama`, `password`, `nim`, `prodi`, `level`, `email`) VALUES
+(1, 'admin', 'Administrator', '2a24588d01f86c4822d68b5c383cb141', '', '', 1, ''),
+(2, 'User', 'User', '202cb962ac59075b964b07152d234b70', '14115024', 'Teknik Informatika', 2, ''),
+(14, 'ben', 'BENYAMIN TUPANG', '202cb962ac59075b964b07152d234b70', '14115061', 'IF', 2, '');
 
 -- --------------------------------------------------------
 
@@ -82,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `voting` (
   PRIMARY KEY (`id_voting`),
   KEY `id_kandidat` (`id_kandidat`,`id_login`),
   KEY `id_login` (`id_login`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `voting`
@@ -90,6 +93,7 @@ CREATE TABLE IF NOT EXISTS `voting` (
 
 INSERT INTO `voting` (`id_voting`, `id_kandidat`, `id_login`, `waktu`, `poin`) VALUES
 (1, 1, 2, '2017-09-25 18:37:23', 1);
+
 --
 -- Constraints for dumped tables
 --
