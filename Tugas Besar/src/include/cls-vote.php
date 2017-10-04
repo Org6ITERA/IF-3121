@@ -95,18 +95,18 @@ class DataKandidat{
 	    return $data;
 	}
 	//fungsi menambahkan data kandidat
-	function tambahDataKandidat($jabatan, $visi, $misi, $image){
-		$db = "INSERT INTO kandidat SET jabatan='$jabatan', visi='$visi', misi='$misi', foto='$image'";
+	function tambahDataKandidat($nama_kandidat, $visi, $misi, $image){
+		$db = "INSERT INTO kandidat SET nama_kandidat='$nama_kandidat', visi='$visi', misi='$misi', foto='$image'";
 		return mysql_query($db);
 	}
 	//fungsi update data kandidat foto
-	function updateDataKandidatFoto($jabatan, $visi, $misi, $image, $id){
-		$db = "UPDATE kandidat SET jabatan='$jabatan', visi='$visi', misi='$misi', foto='$image' WHERE id_kandidat='$id'";
+	function updateDataKandidatFoto($nama_kandidat, $visi, $misi, $image, $id){
+		$db = "UPDATE kandidat SET nama_kandidat='$nama_kandidat', visi='$visi', misi='$misi', foto='$image' WHERE id_kandidat='$id'";
 		return mysql_query($db);
 	}
 	//fungsi update data kandidat keseluruhan
-	function updateDataKandidat($jabatan, $visi, $misi, $id){
-		$db = "UPDATE kandidat SET jabatan='$jabatan', visi='$visi', misi='$misi' WHERE id_kandidat='$id'";
+	function updateDataKandidat($nama_kandidat, $visi, $misi, $id){
+		$db = "UPDATE kandidat SET nama_kandidat='$nama_kandidat', visi='$visi', misi='$misi' WHERE id_kandidat='$id'";
 		return mysql_query($db);
 	}
 	//fungsi menghapus data kandidat
@@ -119,7 +119,7 @@ class DataKandidat{
 		$db = mysql_query("SELECT * FROM kandidat WHERE id_kandidat='$id'");
 		$data = mysql_fetch_array($db);
 		if($field == 'id_kandidat') return $data['id_kandidat'];
-		elseif($field == 'jabatan') return $data['jabatan'];
+		elseif($field == 'nama_kandidat') return $data['nama_kandidat'];
 		elseif($field == 'visi') return $data['visi'];
 		elseif($field == 'misi') return $data['misi'];
 		elseif($field == 'foto') return $data['foto'];
