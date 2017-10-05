@@ -40,7 +40,7 @@ $user->logout();
             </div>
             <nav>
               <div id="loginSign">
-                <li><a href="#"  data-toggle="modal" data-target="#login-modal">Log out</a></li>
+                <li><a href="?mod=logout"><i class="icon-off icon-white"></i> Logout</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#register-modal"><?php echo $_SESSION['nama']; ?></a></li>
               </div>
             </nav>
