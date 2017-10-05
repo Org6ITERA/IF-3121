@@ -28,15 +28,32 @@ $user->logout();
     <link href="asset/css/docs.css" rel="stylesheet">
     <script src="asset/js/jquery-latest.js"></script>
     <script src="asset/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/homestyle.css">
+    <link rel="stylesheet" type="text/css" href="./css/dataPemilihStyle.css">
   </head>
   
   <body>
-              <a class="brand" href="">E-Voting ORG6ITERA </a>
-                <div class="nav-collapse collapse">
-                  <?php include 'menu.php'; ?>
+    <header>
+          <div class="container">
+            <div id="logo">
+              <h1>E-VOTE</h1>
+            </div>
+            <nav>
+              <div id="loginSign">
+                <li><a href="#"  data-toggle="modal" data-target="#login-modal">Log out</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#register-modal"><?php echo $_SESSION['nama']; ?></a></li>
+              </div>
+            </nav>
           </div>
+        </header>
+
+    
+      <?php include 'menu.php'; ?>
     <div class="container">
     <?php include 'isi.php'; ?>
+     </div>
+
+     <div style="width: 400px; height: 400px;"></div>
 
   <footer>
       <p>Selamat Datang di WEB VOTING ORG6ITERA. Junjung Tinggi "LUBERJURDIL" 
@@ -44,7 +61,7 @@ $user->logout();
       </p>
   </footer>
 
-    </div> <!-- /container -->
+    <!-- /container -->
 <script src="datatables/jquery-1.10.2.min.js"></script> <!-- Memasukkan plugin jQuery -->
 <script src="datatables/jquery.dataTables.js"></script> <!-- Memasukkan file jquery.dataTables.js -->
 <script>

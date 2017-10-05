@@ -1,0 +1,99 @@
+		<!DOCTYPE html>
+		<html lang="en">
+			<head>
+				<meta charset="utf-8">
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<!--<meta name="viewport" content="width=device-width"> -->
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="stylesheet" type="text/css" href="./css/homestyle.css">
+				<link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+				<title>Templete</title>
+			</head>
+			<body>
+				<header>
+					<div class="container">
+						<div id="logo">
+							<h1>E-VOTE</h1>
+						</div>
+						<nav>
+							<div id="loginSign">
+								<li><a href="#"  data-toggle="modal" data-target="#login-modal">Log in</a></li>
+								<li><a href="#" data-toggle="modal" data-target="#register-modal">Sign Up</a></li>
+							</div>
+						</nav>
+					</div>
+				</header>
+
+				  
+				<div id="navi">
+					<nav>
+						<a href="home.html">Home</a>
+						<a href="#">Help</a>
+						<a href="#contactUs">Contact</a> 	
+					</nav> 
+				</div>
+
+				<div class="container">
+				 <div  class="well" id="kanidatBox" style="height: 500px;">
+				 <table cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+						<td width = "10%">ID</td>
+						<td width = "20%">NAME</td>
+						<td width = "20%">SHORT DESCRIPTION</td>
+						<td width = "30%">LONG DESCRIPTION</td>
+						<td width = "10%">STATUS</td>
+						<td width = "10%">PARENTID</td>
+					</tr>
+
+					<?php foreach($csvData as $field){?>
+					<tr>
+						<td><?php echo $field['id']?></td>
+						<td><?php echo $field['name']?></td>
+						<td><?php echo $field['shortdesc']?></td>
+						<td><?php echo $field['longdesc']?></td>
+						<td><?php echo $field['status']?></td>
+						<td><?php echo $field['parentid']?></td>
+					</tr>
+				<?php }?>
+				</table>
+			    </div>
+				</div>
+
+				<div style="width: 300px; height: 300px;"></div>
+
+
+				<section id ="contactUs">
+					<div class="container">
+						<div id="left">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							</p>
+						</div>
+						<div id="mid">
+							<p>
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+						</div>
+						<div id="right">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							</p>
+						</div>
+					</div>
+				</section>
+				
+
+				<footer>
+					<p> EVOTE Inc, &copy; 2017</p>
+				</footer>
+
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		    <!-- Include all compiled plugins (below), or include individual files as needed -->
+		    <script src="js/bootstrap.min.js"></script>
+			</body>
+		</html>
