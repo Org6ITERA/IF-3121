@@ -14,7 +14,8 @@ $valpil = $kandidat->validasiPilihKandidat($session);
 switch (@$_GET['act']) {
 default:
 ?>
-<div class="navbar navbar-inverse">
+<div class="container">
+<div class="navbar navbar-inverse" style="margin-top: 40px;">
 	<div class="navbar-inner">
 		<div class="container">
 			<?php
@@ -114,6 +115,7 @@ if($valpil>0){
 	?>
 	</div>
 	<div class="span1"></div>
+</div>
 </div>
 </div>
 <?php

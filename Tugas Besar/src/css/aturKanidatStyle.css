@@ -1,0 +1,11 @@
+#kanidatBox{
+	margin-top: 30px;
+	border: 1px solid blue;
+}
+
+#plusBox{
+	text-align: right;
+}
+textarea { resize:none; 
+
+}
