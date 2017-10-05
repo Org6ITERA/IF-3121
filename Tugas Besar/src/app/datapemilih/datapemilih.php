@@ -10,20 +10,22 @@ $validasi = new VotingValidasi;
 switch (@$_GET['act']) {
 default:
 ?>
-
-<div class="navbar navbar-inverse">
-	<div class="navbar-inner">
-		<div class="container">
-			<a class="brand" href="#">Data Voter</a>
-			<div class="nav-collapse">
-				<ul class="nav">
-					<li><a href="?mod=<?php echo @$_GET['mod']?>&amp;act=add" class="medium-box"><i class="icon-plus-sign icon-white"></i> Tambah Pemilih</a></li>
-				</ul>
+  <div class="container">
+	<div class="navbar navbar-inverse" style="margin-top: 40px;">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="#">Data Voter</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li><a href="?mod=<?php echo @$_GET['mod']?>&amp;act=add" class="medium-box"><i class="icon-plus-sign icon-white"></i> Tambah Pemilih</a></li>
+					</ul>
+				</div>
 			</div>
-		</div>
-	</div><!-- /navbar-inner -->
-</div><!-- /navbar -->
-<section>
+		</div><!-- /navbar-inner -->
+	</div><!-- /navbar -->
+  </div>
+
+  <div class="container">
 	<table id="datatable" class="table table-hover table-condensed">
 		<thead>
 			<tr>
@@ -41,8 +43,8 @@ default:
 			<tr>
 				<td><?php echo $c=$c+1;?></td>
 				<td><?php echo strtoupper($data['username']);?></td>
-				<td><a href="?mod=<?php echo @$_GET['mod']?>&amp;act=edit&amp;kode=<?php echo $data['id_login']; ?>" class="btn btn-success" title="Edit"><i class="icon-pencil icon-white"></i></a>
-				<a href="<?php echo $action.'?mod=datapemilih&act=delete&kode='.$data['id_login']; ?>" onClick="return confirm('Anda yakin..???');" class="btn btn-danger" title="Hapus"><i class="icon-trash icon-white"></i></a></td>
+				<td><a href="?mod=<?php echo @$_GET['mod']?>&amp;act=edit&amp;kode=<?php echo $data['id_login']; ?>" class="btn btn-success" title="Edit"><i class="icon-pencil icon-white"></i>edit</a>
+				<a href="<?php echo $action.'?mod=datapemilih&act=delete&kode='.$data['id_login']; ?>" onClick="return confirm('Anda yakin..???');" class="btn btn-danger" title="Hapus"><i class="icon-trash icon-white"></i>delete</a></td>
 			</tr>
 		<?php
 			}
@@ -52,13 +54,14 @@ default:
 		?>
 		</tbody>
 	</table>
-</section>
+</div>
 <?php
 break;
 case 'add':
 ?>
 
-<div class="navbar navbar-inverse">
+<div class="container">
+<div class="navbar navbar-inverse" style="margin-top: 40px;">
 	<div class="navbar-inner">
 		<div class="container">
 			<a class="brand" href="#">Tambah Pemilih Tetap</a>
@@ -131,6 +134,7 @@ case 'add':
 			</div>
 		</div>
 	</form>
+</div>
 </div>
 
 <?php
