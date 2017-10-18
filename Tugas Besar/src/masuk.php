@@ -33,7 +33,7 @@ $user->logout();
   </head>
   
   <body>
-    <header>
+    <header style="margin-top: -60px;">
           <div class="container">
             <div id="logo">
               <h1>E-VOTE</h1>
@@ -55,7 +55,7 @@ $user->logout();
 
      <div style="width: 400px; height: 400px;"></div>
 
-  <footer>
+  <footer  style="margin-bottom: -60px;">
       <p>Selamat Datang di WEB VOTING ORG6ITERA. Junjung Tinggi "LUBERJURDIL" 
       <?php echo substr($_SESSION['username'], 0, 1); ?><br/>
       </p>
