@@ -12,7 +12,7 @@ switch (@$_GET['act']) {
 default:
 ?>
 
-<div class="navbar navbar-inverse">
+<div class="navbar navbar-inverse" style="margin-top: 40px;">
 	<div class="navbar-inner">
 		<div class="container">
 			<a class="brand" href="#">Daftar Kandidat</a>
@@ -57,94 +57,94 @@ default:
 break;
 case 'add':
 ?>
+	 	
+	<div class="navbar navbar-inverse" style="margin-top: 20px;">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="#">Tambah Kandidat Calon</a>
+			</div>
+		</div><!-- /navbar-inner -->
+	</div><!-- /navbar -->
+	<div class="well">
+		<?php
+		if(isset($_POST['submit'])){
+			$nama_kandidat = $validasi->xss($_POST['nama_kandidat']);
+			$visi = $validasi->xss($_POST['visi']);
+			$misi = $validasi->xss($_POST['misi']);
+			$seotitle = seo_title($nama_kandidat);
 
-<div class="navbar navbar-inverse">
-	<div class="navbar-inner">
-		<div class="container">
-			<a class="brand" href="#">Tambah Kandidat Calon</a>
-		</div>
-	</div><!-- /navbar-inner -->
-</div><!-- /navbar -->
-<div class="well">
-	<?php
-	if(isset($_POST['submit'])){
-		$nama_kandidat = $validasi->xss($_POST['nama_kandidat']);
-		$visi = $validasi->xss($_POST['visi']);
-		$misi = $validasi->xss($_POST['misi']);
-		$seotitle = seo_title($nama_kandidat);
+			$extensionList = array("jpg", "jpeg", "png");
+			$lokasi_file = $_FILES['fupload']['tmp_name'];
+	    	$nama_file   = $_FILES['fupload']['name'];
+	    	$pecah = explode(".", $nama_file);
+			$ekstensi = @$pecah[1];
+			$rand = rand(1111,9999);
+			$nama_file_unik = $rand."-".$seotitle.'.'.$ekstensi;
+			$image = 'calon-'.$nama_file_unik;
 
-		$extensionList = array("jpg", "jpeg", "png");
-		$lokasi_file = $_FILES['fupload']['tmp_name'];
-    	$nama_file   = $_FILES['fupload']['name'];
-    	$pecah = explode(".", $nama_file);
-		$ekstensi = @$pecah[1];
-		$rand = rand(1111,9999);
-		$nama_file_unik = $rand."-".$seotitle.'.'.$ekstensi;
-		$image = 'calon-'.$nama_file_unik;
-
-		if (in_array($ekstensi, $extensionList)){
-			UploadImages($image);
-			if($kandidat->tambahDataKandidat($nama_kandidat,$visi,$misi,$image)){?>
-			<meta http-equiv='refresh' content='0; url=?mod=kandidatcalon'>
-			<div class="alert-success alert-block">
-		        <button type="button" class="close" data-dismiss="alert">×</button>
-		        <h4>Berhasil!</h4>
-		    	Berhasil menambah Data Kandidat
-	      	</div>
-			<?php }else{
+			if (in_array($ekstensi, $extensionList)){
+				UploadImages($image);
+				if($kandidat->tambahDataKandidat($nama_kandidat,$visi,$misi,$image)){?>
+				<meta http-equiv='refresh' content='0; url=?mod=kandidatcalon'>
+				<div class="alert-success alert-block">
+			        <button type="button" class="close" data-dismiss="alert">×</button>
+			        <h4>Berhasil!</h4>
+			    	Berhasil menambah Data Kandidat
+		      	</div>
+				<?php }else{
+					echo "
+					<div class=\"alert alert-block\">
+						<button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button>
+						<h4>GAGAL!</h4>
+						Gagal menyimpan!
+					</div>
+					";
+				}
+			}else{
 				echo "
 				<div class=\"alert alert-block\">
 					<button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button>
-					<h4>GAGAL!</h4>
-					Gagal menyimpan!
+					<h4>FORMAT GAMBAR SALAH!</h4>
+					Format Gambar tidak didukung!
 				</div>
 				";
 			}
-		}else{
-			echo "
-			<div class=\"alert alert-block\">
-				<button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button>
-				<h4>FORMAT GAMBAR SALAH!</h4>
-				Format Gambar tidak didukung!
-			</div>
-			";
 		}
-	}
-	?>
-	<form class="form-horizontal" method="post" id="form" enctype="multipart/form-data">
-		<div class="control-group">
-			<label class="control-label" for="nama_kandidat">Nama Calon Kandidat</label>
-			<div class="controls">
-		  		<input type="text" class="span3" required maxlength="25" name="nama_kandidat" id="nama_kandidat" value="">
+		?>
+		<form class="form-horizontal" method="post" id="form" enctype="multipart/form-data">
+			<div class="control-group">
+				<label class="control-label" for="nama_kandidat">Nama Calon Kandidat</label>
+				<div class="controls">
+			  		<input type="text" class="span3" required maxlength="25" name="nama_kandidat" id="nama_kandidat" value="">
+				</div>
 			</div>
-		</div>
-		<div class="control-group">
-			<label class="control-label" for="visi">Visi</label>
-			<div class="controls">
-		  		<textarea class="span3" name="visi" required="true" id="visi"></textarea>
+			<div class="control-group">
+				<label class="control-label" for="visi">Visi</label>
+				<div class="controls">
+			  		<textarea class="span3" name="visi" required="true" id="visi"></textarea>
+				</div>
 			</div>
-		</div>
-		<div class="control-group">
-			<label class="control-label" for="misi">Misi</label>
-			<div class="controls">
-		  		<textarea class="span3" name="misi" required="true" id="misi"></textarea>
+			<div class="control-group">
+				<label class="control-label" for="misi">Misi</label>
+				<div class="controls">
+			  		<textarea class="span3" name="misi" required="true" id="misi"></textarea>
+				</div>
 			</div>
-		</div>
-		<div class="control-group">
-			<label class="control-label" for="password">Foto Calon</label>
-			<div class="controls">
-		  		<input type="file" class="span4" required name="fupload" id="fupload">
+			<div class="control-group">
+				<label class="control-label" for="password">Foto Calon</label>
+				<div class="controls">
+			  		<input type="file" class="span4" required name="fupload" id="fupload">
+				</div>
+		  		<small><b>(Gunakan file .jpg /.jpeg /.png)</b></small>
 			</div>
-	  		<small><b>(Gunakan file .jpg /.jpeg /.png)</b></small>
-		</div>
-		<div class="control-group">
-			<div class="controls">
-				<button type="submit" name="submit" class="btn">Simpan</button>
-				<a href="?mod=<?php echo $_GET['mod']; ?>" class="btn">Tutup</a>
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" name="submit" class="btn">Simpan</button>
+					<a href="?mod=<?php echo $_GET['mod']; ?>" class="btn">Tutup</a>
+				</div>
 			</div>
-		</div>
-	</form>
-</div>
+		</form>
+	</div>
 
 <?php
 break;
